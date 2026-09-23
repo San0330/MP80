@@ -1,0 +1,29 @@
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Android"
+        android:textSize="20sp"
+        android:layout_x="20dp"
+        android:layout_y="40dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:layout_x="100dp"
+        android:layout_y="120dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Another Text"
+        android:textSize="16sp"
+        android:layout_x="30dp"
+        android:layout_y="220dp" />
+
+</AbsoluteLayout>
