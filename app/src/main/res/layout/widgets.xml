@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- TextView attributes demo (10 TextView-specific attributes) -->
+    <TextView
+        android:id="@+id/tvDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Android TextView! This long sentence shows how several attributes work together."
+        android:textSize="20sp"
+        android:textColor="#1565C0"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:lineSpacingExtra="6dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textAllCaps="true"
+        android:letterSpacing="0.05" />
+
+    <!-- EditText attributes demo (12 EditText/TextView-specific attributes) -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"
+        android:textColorHint="#9E9E9E"
+        android:textSize="18sp"
+        android:textColor="#212121"
+        android:maxLength="40"
+        android:maxLines="1"
+        android:imeOptions="actionNext" />
+
+    <!-- Button attributes demo (10 Button/TextView-specific attributes) -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#1565C0"
+        android:textAllCaps="false"
+        android:elevation="8dp"
+        android:tooltipText="Tap to submit the form"
+        android:onClick="onSubmitClick" />
+
+    <!-- CheckBox attributes demo (10 CheckBox/CompoundButton/TextView attributes) -->
+    <CheckBox
+        android:id="@+id/cbAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="I agree to the terms"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:checked="true"
+        android:buttonTint="#1565C0"
+        android:enabled="true"
+        android:onClick="onCheckboxClick" />
+
+    <!-- RadioGroup + RadioButton attributes demo (RadioGroup keeps only one button selected) -->
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/rbMale">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:buttonTint="#1565C0"
+            android:padding="8dp"
+            android:onClick="onRadioClick" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:buttonTint="#1565C0"
+            android:padding="8dp"
+            android:onClick="onRadioClick" />
+    </RadioGroup>
+
+    <!-- Spinner attributes demo (drop-down list; items come from a string-array in strings.xml) -->
+    <Spinner
+        android:id="@+id/spCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/countries"
+        android:spinnerMode="dialog"
+        android:prompt="@string/choose_country"
+        android:background="#BBDEFB"
+        android:padding="12dp"
+        android:minHeight="48dp" />
+
+</LinearLayout>

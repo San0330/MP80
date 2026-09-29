@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">MobileProgramming</string>
     <string name="hello_bca_6th">Hello BCA 6th</string>
+
+    <string name="choose_country">Choose your country</string>
+
+    <string-array name="countries">
+        <item>Nepal</item>
+        <item>India</item>
+        <item>Bhutan</item>
+        <item>Bangladesh</item>
+        <item>Sri Lanka</item>
+    </string-array>
 </resources>
