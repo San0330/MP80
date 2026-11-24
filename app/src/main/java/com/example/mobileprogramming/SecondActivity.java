@@ -2,6 +2,8 @@ package com.example.mobileprogramming;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -26,14 +28,15 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
 
-        // receiving data
-        Intent i = getIntent();
-        int id = i.getIntExtra("id",0);
-        String name= i.getStringExtra("name");
-        String address = i.getStringExtra("address");
-
-        // display received data in textview
-        TextView tv1 = findViewById(R.id.tv);
-        tv1.setText("Id = " + id + "\nName = " + name + "\nAddress = " + address);
+        Button btn2 = findViewById(R.id.btn);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.putExtra("message", "I am back with a msg !");
+                setResult(RESULT_OK, i);
+                finish();
+            }
+        });
     }
 }

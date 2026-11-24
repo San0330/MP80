@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -39,11 +40,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, SecondActivity.class);
-                i.putExtra("id", 101);
-                i.putExtra("name", "Ram");
-                i.putExtra("address", "Butwal");
-                startActivity(i);
+                startActivityForResult(i,2);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        TextView tv = findViewById(R.id.tv);
+        if(requestCode == 2 && resultCode == RESULT_OK && data != null){
+            String message = data.getStringExtra("message");
+            tv.setText(message);
+        } else if(requestCode == 2){
+            tv.setText("Cancelled, no message");
+        }
     }
 }
