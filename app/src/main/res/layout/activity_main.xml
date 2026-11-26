@@ -6,20 +6,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/fragment1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.mobileprogramming.Fragment1"
-        android:layout_weight="1"
-        />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2"
+        >
 
-    <fragment
-        android:id="@+id/fragment2"
+        <Button
+            android:id="@+id/frag1Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="Frag 1"
+            />
+
+        <Button
+            android:id="@+id/frag2Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Frag 2"
+            />
+    </LinearLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.mobileprogramming.Fragment2"
-        android:layout_weight="1"
+        android:id="@+id/frameLayout"
+        android:layout_marginTop="10dp"
         />
 
 </LinearLayout>
