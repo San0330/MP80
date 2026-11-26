@@ -2,15 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:weightSum="2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <fragment
+        android:id="@+id/fragment1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_bca_6th"
-        android:textSize="90px"
-        android:gravity="center"
+        android:layout_height="match_parent"
+        android:name="com.example.mobileprogramming.Fragment1"
+        android:layout_weight="1"
+        />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.mobileprogramming.Fragment2"
+        android:layout_weight="1"
         />
 
 </LinearLayout>
